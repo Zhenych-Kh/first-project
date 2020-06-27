@@ -1,0 +1,40 @@
+using System;
+
+namespace ConsoleApp2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] numbers = new int[5];
+            int[] numbers2 = new int[5];
+
+            Console.WriteLine("Введите первое число");
+            for (int i = 0; i < 5; i++)
+            {
+                numbers[i] = int.Parse(Console.ReadLine());
+            }
+
+            Console.WriteLine("Введите второе число");
+            for (int n = 0; n < 5; n++)
+            {
+                numbers2[n] = int.Parse(Console.ReadLine());
+            }
+
+            Console.WriteLine("Совпадают такие цыфры:");
+
+            foreach (int i in numbers)
+            {
+                foreach (int n in numbers2)
+                {
+                    if (i == n)
+                    {
+                        Console.WriteLine(i);
+                    }
+
+
+                }
+            }
+        }
+    }
+}
